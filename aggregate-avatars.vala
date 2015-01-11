@@ -31,7 +31,8 @@ void main()
 {
 	mainloop = new MainLoop();
 
-	var aggregator = IndividualAggregator.dup();
+	/* Bad code but for folks 0.6.8 i can't see alternative */
+	var aggregator = new IndividualAggregator();
 	aggregator.prepare();
 	
 	Idle.add(() => {
